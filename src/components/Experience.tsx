@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Briefcase, Cpu, Bot, Github } from 'lucide-react';
+import { Bot, Github } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const [ref, inView] = useInView({

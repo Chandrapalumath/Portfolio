@@ -1,16 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollToNext = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">

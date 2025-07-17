@@ -136,10 +136,12 @@ const Background3D: React.FC = () => {
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
       }
-      if (mountRef.current && renderer.domElement) {
-        mountRef.current.removeChild(renderer.domElement);
+      const currentMount = mountRef.current;
+      const currentRenderer = renderer;
+      if (currentMount && currentRenderer.domElement) {
+        currentMount.removeChild(currentRenderer.domElement);
       }
-      renderer.dispose();
+      currentRenderer.dispose();
     };
   }, []);
 
